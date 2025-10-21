@@ -1,19 +1,12 @@
 #include <ESP32Servo.h>
 
-// Motor A
-
+//Define Pins
 int pwmA = 32;
 int in1A = 33;
 int in2A = 25;
-
-// Motor B
-
 int pwmB = 26;
 int in1B = 27;
 int in2B = 14;
-
-//Servo Pin
-
 int servoPin = 13;
 
 // Motor Speed Values - Start at zero
@@ -26,7 +19,7 @@ int pos = 0;
 
 
 void setup() {
-  // put your setup code here, to run once:
+  // Initialize Pins
   pinMode(pwmA, OUTPUT);
   pinMode(pwmB, OUTPUT);
   pinMode(in1A, OUTPUT);
@@ -38,11 +31,9 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  //Write basic commands for testing ROM and functionality
   digitalWrite(in1A, HIGH);
   digitalWrite(in2A, LOW);
-
   digitalWrite(in1B, HIGH);
   digitalWrite(in2B, LOW);
 
